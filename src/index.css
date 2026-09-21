@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #F5F4F0;
+    --color-black: #000000;
+    --color-forest: #0E1910;
+    --color-accent-gray: #343A2F;
+    --color-light-gray: #E0E1DC;
+    --color-bronze: #C0886A;
+    --color-yellow: #F4E95B;
+  }
+
+  html {
+    background-color: #F5F4F0;
+    color: #000000;
+    font-family: 'thmanyah Serif Text', 'Noto Serif Arabic', 'Amiri', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F5F4F0;
+    color: #000000;
+  }
+}
+
+/* Typography definitions according to Thmanyah 5-weight editorial guidelines */
+.font-display,
+.font-heading,
+.font-thmanyah-display {
+  font-family: 'thmanyah Serif Display', 'Noto Serif Arabic', 'Amiri', 'Playfair Display', 'Cormorant Garamond', serif;
+  font-feature-settings: "cv01", "ss01", "ss02";
+}
+
+.font-text,
+.font-body,
+.font-thmanyah-text {
+  font-family: 'thmanyah Serif Text', 'Noto Serif Arabic', 'Amiri', 'IBM Plex Serif', serif;
+  line-height: 1.7;
+}
+
+.font-sans,
+.font-sans-ar,
+.font-thmanyah-sans {
+  font-family: 'thmanyah Sans', 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Font weights mapping (رفيع, عادي, متوسط, سميك, ثقيل) */
+.font-th-light {
+  font-weight: 300;
+}
+.font-th-regular {
+  font-weight: 400;
+}
+.font-th-medium {
+  font-weight: 500;
+}
+.font-th-bold {
+  font-weight: 700;
+}
+.font-th-heavy,
+.font-th-black {
+  font-weight: 900;
+}
+
+/* Minimal Editorial Architectural Grid Lines */
+.bg-editorial-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 25, 16, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 25, 16, 0.04) 1px, transparent 1px);
+}
+
+.bg-forest-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(224, 225, 220, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(224, 225, 220, 0.05) 1px, transparent 1px);
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F4F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E0E1DC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #343A2F;
+}
+
+/* Clean Editorial Card Shadows & Subtle Borders */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E0E1DC;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: #343A2F;
+  box-shadow: 0 12px 32px -8px rgba(14, 25, 16, 0.08);
+}
+
+.editorial-card-dark {
+  background-color: #0E1910;
+  border: 1px solid rgba(224, 225, 220, 0.12);
+  color: #F5F4F0;
+}
+
+.editorial-card-dark:hover {
+  border-color: rgba(192, 136, 106, 0.4);
+}
+
+/* Continuous Infinite Marquee Animations */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-left 32s linear infinite;
+}
+
+[dir="rtl"] .animate-marquee-track {
+  animation: marquee-right 32s linear infinite;
+}
+
+.animate-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Cinematic Camera Movement (Filming the architectural villa with a slow, smooth tracking glide) */
+@keyframes cinematic-camera-glide {
+  0% {
+    transform: scale(1.04) translate3d(0%, 0%, 0);
+  }
+  20% {
+    transform: scale(1.11) translate3d(-2.8%, -1.2%, 0);
+  }
+  45% {
+    transform: scale(1.16) translate3d(-4.2%, 1%, 0);
+  }
+  70% {
+    transform: scale(1.12) translate3d(1.8%, 1.8%, 0);
+  }
+  85% {
+    transform: scale(1.17) translate3d(3.2%, -1%, 0);
+  }
+  100% {
+    transform: scale(1.04) translate3d(0%, 0%, 0);
+  }
+}
+
+.animate-cinematic-camera {
+  animation: cinematic-camera-glide 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Blueprint mode grid */
+.bg-blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 25, 16, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 25, 16, 0.08) 1px, transparent 1px);
+}
+

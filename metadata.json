@@ -1,0 +1,6 @@
+{
+  "name": "Falaq Engineering Consultants | مكتب فَلَق للإستشارات الهندسية",
+  "description": "الموقع الرسمي لمكتب فَلَق للإستشارات الهندسية بالرس، القصيم - حلول وتصاميم معمارية وإنشائية وإشراف هندسي متكامل بمستوى أكاديمي واحترافي رفيع.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
