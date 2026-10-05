@@ -212,12 +212,6 @@ export default function ServicesAndPackages({
                     </p>
                   </div>
 
-                  {/* Target Audience Highlight */}
-                  <div className="p-3 rounded-sm bg-[#F5F4F0] border border-[#E0E1DC] text-xs mb-5 font-thmanyah-sans">
-                    <span className="font-th-bold text-[#000000] block mb-0.5">{isAr ? 'مناسبة لمن:' : 'Best Suited For:'}</span>
-                    <p className="text-[#343A2F] leading-normal">{pkg.targetAudience}</p>
-                  </div>
-
                   {/* Duration & Delivery */}
                   <div className="flex items-center justify-between text-xs text-[#343A2F] py-2 border-y border-[#E0E1DC] mb-5 font-thmanyah-sans">
                     <span>{isAr ? 'مدة إنجاز المخططات:' : 'Delivery Timeline:'}</span>

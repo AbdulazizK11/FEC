@@ -8,7 +8,6 @@ import {
   MessageSquare, 
   ArrowLeft, 
   ShieldCheck, 
-  CheckCircle2, 
   MapPin,
   ChevronDown
 } from 'lucide-react';
@@ -171,51 +170,30 @@ export default function Hero({ onExploreClick, onEstimateClick }: HeroProps) {
           </motion.a>
         </motion.div>
 
-        {/* Key Micro Trust List */}
+        {/* Trust Stats Counter Bar - Cascading Cards raised up to replace micro-trust list */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-6 text-xs sm:text-sm text-[#343A2F] border-t border-[#E0E1DC]/80 font-thmanyah-sans mt-8"
-        >
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#0E1910] shrink-0" />
-            <span className="font-th-medium">{t('heroTrust1')}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#0E1910] shrink-0" />
-            <span className="font-th-medium">{t('heroTrust2')}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#0E1910] shrink-0" />
-            <span className="font-th-medium">{t('heroTrust3')}</span>
-          </div>
-        </motion.div>
-
-        {/* Trust Stats Counter Bar - Cascading Cards */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.86, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 pt-8 border-t border-[#E0E1DC]/80 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-right"
+          className="mt-8 pt-6 border-t border-[#E0E1DC]/80 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-right"
         >
           {STATS_DATA.map((stat, idx) => (
             <motion.div 
               key={idx} 
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.88 + idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.45, delay: 0.82 + idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
               className="p-5 rounded-sm bg-white/90 backdrop-blur-xs border border-[#E0E1DC] hover:border-[#343A2F] transition-colors shadow-xs text-center cursor-default"
             >
               <div className="text-2xl sm:text-3xl font-th-black text-[#0E1910] font-thmanyah-sans mb-1">
-                {stat.value}
+                {isAr ? stat.value : (stat.valueEn || stat.value)}
               </div>
               <div className="text-xs sm:text-sm font-th-bold text-[#000000] font-thmanyah-display mb-0.5">
-                {stat.label}
+                {isAr ? stat.label : (stat.labelEn || stat.label)}
               </div>
               <div className="text-[11px] text-[#343A2F] font-thmanyah-sans">
-                {stat.sub}
+                {isAr ? stat.sub : (stat.subEn || stat.sub)}
               </div>
             </motion.div>
           ))}

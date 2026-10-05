@@ -10,7 +10,8 @@ import {
   Send, 
   CheckCircle2, 
   ExternalLink,
-  Navigation
+  Navigation,
+  Globe
 } from 'lucide-react';
 
 export default function ContactAndLocation() {
@@ -100,7 +101,7 @@ Please get in touch to schedule a meeting.`;
                   <div>
                     <span className="font-th-bold text-[#000000] block mb-0.5">{isAr ? 'موقع المكتب:' : 'Office Location:'}</span>
                     <p className="text-[#343A2F] leading-relaxed font-thmanyah-text">
-                      {isAr ? OFFICE_INFO.locationAddress : 'King Fahd Road, Al-Rass, Al-Qassim Province, Saudi Arabia'}
+                      {isAr ? OFFICE_INFO.locationAddress : OFFICE_INFO.locationAddressEn}
                     </p>
                     <span className="text-[11px] text-[#000000] font-th-medium">{isAr ? 'مدينة الرس - منطقة القصيم' : 'Al-Rass City - Al-Qassim Region'}</span>
                   </div>
@@ -141,6 +142,20 @@ Please get in touch to schedule a meeting.`;
                     <span className="font-th-bold text-[#000000] block mb-0.5">{isAr ? 'البريد الإلكتروني المعتمد:' : 'Official Email:'}</span>
                     <a href={`mailto:${OFFICE_INFO.email}`} className="text-[#0E1910] hover:underline font-th-medium text-xs">
                       {OFFICE_INFO.email}
+                    </a>
+                  </div>
+                </div>
+
+                {/* Official Domain & Website */}
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-sm bg-[#F5F4F0] border border-[#E0E1DC] flex items-center justify-center text-[#0E1910] shrink-0 mt-0.5">
+                    <Globe className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-th-bold text-[#000000] block mb-0.5">{isAr ? 'الموقع والنطاق الرسمي:' : 'Official Domain:'}</span>
+                    <a href={OFFICE_INFO.website} className="text-[#0E1910] hover:underline font-th-bold text-xs sm:text-sm inline-flex items-center gap-1" dir="ltr">
+                      <span>{OFFICE_INFO.domain}</span>
+                      <ExternalLink className="w-3 h-3 text-[#343A2F]" />
                     </a>
                   </div>
                 </div>
@@ -238,7 +253,6 @@ Please get in touch to schedule a meeting.`;
                     <input
                       type="text"
                       required
-                      placeholder={isAr ? "مثال: عبدالله الشمري" : "e.g. Abdullah Al-Shammari"}
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-sm bg-[#F5F4F0] border border-[#E0E1DC] text-[#000000] placeholder-[#343A2F]/60 text-xs sm:text-sm focus:outline-none focus:border-[#0E1910]"

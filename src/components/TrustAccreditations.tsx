@@ -13,7 +13,7 @@ export default function TrustAccreditations() {
     },
     {
       title: 'منصة بلدي والأمانات',
-      subtitle: `اعتماد الربط الإلكتروني: ${OFFICE_INFO.baladyId}`,
+      subtitle: `رخصة النشاط التجاري: ${OFFICE_INFO.baladyId}`,
       badge: 'إصدار رخص فوري',
     },
     {
@@ -34,7 +34,7 @@ export default function TrustAccreditations() {
     },
     {
       title: 'Balady Municipal Platform',
-      subtitle: `Digital Integration: ${OFFICE_INFO.baladyId}`,
+      subtitle: `Commercial License: ${OFFICE_INFO.baladyId}`,
       badge: 'Instant Permit Issuance',
     },
     {
@@ -98,4 +98,3 @@ export default function TrustAccreditations() {
     </section>
   );
 }
-

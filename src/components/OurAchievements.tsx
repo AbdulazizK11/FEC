@@ -154,8 +154,8 @@ export default function OurAchievements({ onOpenEstimator }: OurAchievementsProp
   const englishSectors = [
     {
       title: 'Luxury Residential Villas & Palaces',
-      percentage: 65,
-      count: 360,
+      percentage: 70,
+      count: 384,
       description: 'Modern, neoclassical, and Salmani luxury villas with full BIM structural modeling and interior fit-out plans.',
     },
     {
@@ -297,7 +297,7 @@ export default function OurAchievements({ onOpenEstimator }: OurAchievementsProp
                 <div className="space-y-1 mb-3">
                   <div className="text-4xl sm:text-5xl text-[#0E1910]">
                     <AnimatedCounter
-                      target={550}
+                      target={554}
                       prefix="+"
                       isVisible={isInView}
                       useArabicDigits={isAr}
@@ -313,8 +313,8 @@ export default function OurAchievements({ onOpenEstimator }: OurAchievementsProp
 
                 <p className="text-xs text-[#343A2F] leading-relaxed border-t border-[#E0E1DC] pt-3 font-thmanyah-text">
                   {isAr 
-                    ? 'أكثر من ٥٥٠ فيلا ومجمعاً تجارياً تم إعداد مخططاتها التنفيذية وإصدار رخصها عبر منصة بلدي بدقة هندسية تامة.'
-                    : 'Over 550 villas and commercial complexes designed with execution blueprints and licensed via Balady platform.'}
+                    ? 'أكثر من ٥٥٤ فيلا ومجمعاً تجارياً تم إعداد مخططاتها التنفيذية وإصدار رخصها عبر منصة بلدي بدقة هندسية تامة.'
+                    : 'Over 554 villas and commercial complexes designed with execution blueprints and licensed via Balady platform.'}
                 </p>
               </div>
 
@@ -397,76 +397,32 @@ export default function OurAchievements({ onOpenEstimator }: OurAchievementsProp
 
             </div>
 
-            {/* 3 Secondary Metric Performance Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              
-              <div className={`p-5 rounded-sm bg-white border border-[#E0E1DC] flex items-center gap-4 ${isAr ? 'text-right' : 'text-left'}`}>
-                <div className="w-10 h-10 rounded-sm bg-[#F5F4F0] text-[#0E1910] flex items-center justify-center shrink-0 border border-[#E0E1DC]">
-                  <Layers className="w-5 h-5" />
+            {/* Value Engineering Highlight - Spans Full Width */}
+            <div className={`p-6 sm:p-7 rounded-sm bg-white border border-[#E0E1DC] shadow-xs hover:border-[#343A2F] transition-all flex flex-col md:flex-row items-center justify-between gap-6 ${isAr ? 'text-right' : 'text-left'}`}>
+              <div className="flex items-center gap-4 sm:gap-5 w-full md:w-auto">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-sm bg-[#F5F4F0] text-[#0E1910] flex items-center justify-center shrink-0 border border-[#E0E1DC]">
+                  <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 text-[#0E1910]" />
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-th-black text-[#000000]">
-                    <AnimatedCounter
-                      target={350000}
-                      prefix="+"
-                      suffix={isAr ? 'م²' : 'm²'}
-                      isVisible={isInView}
-                      useArabicDigits={isAr}
-                    />
-                  </div>
-                  <div className="text-xs font-th-bold text-[#000000] font-thmanyah-display">
-                    {isAr ? 'مسطحات بناء مصممة ومعتمدة' : 'Approved Built-Up Areas'}
-                  </div>
-                  <div className="text-[11px] text-[#343A2F] font-thmanyah-sans">
-                    {isAr ? 'استغلال أمثل ومستدام للفراغات' : 'Optimal space efficiency'}
-                  </div>
+                  <h4 className="text-base sm:text-lg lg:text-xl font-th-bold text-[#000000] font-thmanyah-display mb-1">
+                    {isAr ? 'متخصصين في هندسة القيمة وتحقيق التصميم الإنشائي الأمثل' : 'Specialists in Value Engineering & Optimal Structural Design'}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#343A2F] font-thmanyah-sans">
+                    {isAr ? 'عبر النمذجة الإنشائية ثلاثية الأبعاد' : 'Through advanced 3D structural modeling'}
+                  </p>
                 </div>
               </div>
 
-              <div className={`p-5 rounded-sm bg-white border border-[#E0E1DC] flex items-center gap-4 ${isAr ? 'text-right' : 'text-left'}`}>
-                <div className="w-10 h-10 rounded-sm bg-[#F5F4F0] text-[#0E1910] flex items-center justify-center shrink-0 border border-[#E0E1DC]">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-th-black text-[#000000]">
-                    <AnimatedCounter
-                      target={100}
-                      suffix={isAr ? '٪' : '%'}
-                      isVisible={isInView}
-                      useArabicDigits={isAr}
-                    />
-                  </div>
-                  <div className="text-xs font-th-bold text-[#000000] font-thmanyah-display">
-                    {isAr ? 'مطابقة كود البناء السعودي SBC' : 'Saudi Building Code SBC Match'}
-                  </div>
-                  <div className="text-[11px] text-[#343A2F] font-thmanyah-sans">
-                    {isAr ? 'صفر ملاحظات في رخص بلدي' : 'Zero Balady rejections'}
-                  </div>
+              <div className="shrink-0 flex items-center gap-2 self-start md:self-center">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-th-black text-[#000000] font-thmanyah-sans">
+                  <AnimatedCounter
+                    target={25}
+                    suffix={isAr ? '٪' : '%'}
+                    isVisible={isInView}
+                    useArabicDigits={isAr}
+                  />
                 </div>
               </div>
-
-              <div className={`p-5 rounded-sm bg-white border border-[#E0E1DC] flex items-center gap-4 ${isAr ? 'text-right' : 'text-left'}`}>
-                <div className="w-10 h-10 rounded-sm bg-[#F5F4F0] text-[#0E1910] flex items-center justify-center shrink-0 border border-[#E0E1DC]">
-                  <TrendingUp className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-th-black text-[#000000]">
-                    <AnimatedCounter
-                      target={24}
-                      suffix={isAr ? '٪' : '%'}
-                      isVisible={isInView}
-                      useArabicDigits={isAr}
-                    />
-                  </div>
-                  <div className="text-xs font-th-bold text-[#000000] font-thmanyah-display">
-                    {isAr ? 'متوسط وفر حديد التسليح والمواد' : 'Average Steel & Material Savings'}
-                  </div>
-                  <div className="text-[11px] text-[#343A2F] font-thmanyah-sans">
-                    {isAr ? 'عبر النمذجة الإنشائية ثلاثية الأبعاد' : 'Through advanced 3D BIM modeling'}
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         )}
@@ -487,7 +443,7 @@ export default function OurAchievements({ onOpenEstimator }: OurAchievementsProp
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm bg-[#F5F4F0] text-[#0E1910] text-xs font-th-bold border border-[#E0E1DC] font-thmanyah-sans">
                 <Award className="w-3.5 h-3.5 text-[#0E1910]" />
-                <span>{isAr ? 'إجمالي +٥٥٠ مشروع منجز' : 'Total +550 Completed Projects'}</span>
+                <span>{isAr ? 'إجمالي +٥٥٤ مشروع منجز' : 'Total +554 Completed Projects'}</span>
               </span>
             </div>
 

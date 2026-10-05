@@ -16,6 +16,7 @@ export type ProjectCategory = 'all' | 'residential' | 'commercial' | 'interior' 
 
 export interface PortfolioProject {
   id: string;
+  projectNumber?: number; // e.g. 1, 2, 3 ... 10
   title: string;
   titleEn?: string;
   category: 'residential' | 'commercial' | 'interior' | 'hospitality';
@@ -27,11 +28,18 @@ export interface PortfolioProject {
   architecturalStyle: string; // e.g. "مودرن معاصر", "طراز سلماني حديث", "نيوكلاسيك فاخر"
   description: string;
   mainImage: string;
+  images: string[];
   galleryImages: string[];
-  floorPlanImage?: string;
   highlightFeatures: string[];
   deliverables: string[];
   clientType: string;
+  deedNumber?: string;
+  plotInfo?: string;
+  gregorianDate?: string;
+  hijriDate?: string;
+  areaBreakdown?: { label: string; area: string; ratio?: string }[];
+  fenceLength?: string;
+  needsImageUpload?: boolean;
 }
 
 export interface ServicePackage {

@@ -63,6 +63,41 @@ export default function AboutAndLeadership() {
         'Accredited consultant for building safety and Balady certifications',
       ],
     },
+    {
+      id: 'eng-mohanad-altayeb',
+      name: 'Eng. Mohanad Al-Tayeb',
+      title: 'Design & Supervision Consultant | Shop Drawings & SBC Expert',
+      academicDegree: 'Bachelor of Architectural & Environmental Engineering • Certified Consultant Engineer',
+      sceNumber: 'P.Eng - Consultant & Professional Engineer',
+      specialization: 'Architectural Coordination, Shop Drawings & On-Site Supervision',
+      experienceYears: 6,
+      image: '/images/experts/eng_mohanad.jpg',
+      linkedinUrl: 'https://linkedin.com/in/muhannad-altayb-897867234',
+      bio: 'Architectural engineer with 6 years of expertise in the Saudi engineering sector, specializing in architectural design coordination, shop drawings, and on-site supervision for residential and commercial developments. Highly experienced in Saudi Building Code (SBC) compliance and Balady municipal procedures.',
+      publicationsOrAchievements: [
+        'Engineering Supervision: Comprehensive on-site supervision and tracking for major commercial and residential developments, ensuring strict field quality compliance.',
+        'Professional Accreditation: Accredited member of Saudi Council of Engineers (SCE) with consultant professional license.',
+        'Shop Drawings Development: Developed and reviewed advanced shop drawings aligned with SBC and municipal design guidelines.',
+        'Technical Inspection Services (TIS): Managed project safety and quality assurance inspections with certified inspection bodies and insurers.',
+      ],
+    },
+    {
+      id: 'eng-ghala-alzahrani',
+      name: 'Eng. Ghala Al-Zahrani',
+      title: 'Architectural & Interior Design Engineer | Facade & Spatial Planning',
+      academicDegree: 'Bachelor of Architectural Engineering & Interior Design',
+      sceNumber: 'Accredited Member - Saudi Council of Engineers (SCE)',
+      specialization: 'Modern Architecture, 3D Visualization & Interior Spatial Design',
+      experienceYears: 4,
+      image: '/images/experts/eng_ghala.jpg',
+      bio: 'Architectural engineer specializing in modern architectural aesthetics, interior space planning, and 3D visualization for high-end residential and commercial projects at Falaq Engineering Consultants. Dedicated to harmonious integration of modern functionality, local identity, and Saudi Building Code compliance.',
+      publicationsOrAchievements: [
+        'Modern & Neoclassical Facade Concepts for Residential Villas and Palaces',
+        'Detailed Architectural Planning & Interior Space Optimization',
+        'Advanced 3D Visualization, Material Selection & Lighting Design',
+        'Balady & Saudi Building Code Compliance and Permitting Coordination',
+      ],
+    },
   ];
 
   const experts = isAr ? EXPERTS_LIST : englishExperts;
@@ -143,7 +178,7 @@ export default function AboutAndLeadership() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {experts.map((expert) => (
               <div
                 key={expert.id}
