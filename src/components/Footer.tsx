@@ -35,7 +35,7 @@ export default function Footer() {
       id: 'cr',
       title: isAr ? 'الرقم الوطني الموحد / السجل التجاري' : 'Unified National No. / CR',
       value: OFFICE_INFO.crNumber,
-      sub: isAr ? 'شركة ذات مسؤولية محدودة - مهنية' : 'Professional LLC',
+      sub: isAr ? 'فلق للإستشارات الهندسية' : 'Falaq Engineering Consultants',
       icon: Building2,
     },
     {
@@ -146,7 +146,7 @@ export default function Footer() {
                 <span className="text-base font-th-heavy text-[#F5F4F0] font-thmanyah-display block leading-none">
                   {isAr ? (
                     <>
-                      شركة مكتب <span className="text-[#F4E95B]">فَلَق</span>
+                      <span className="text-[#F4E95B]">فَلَق</span> للإستشارات الهندسية
                     </>
                   ) : (
                     <>
@@ -156,8 +156,8 @@ export default function Footer() {
                 </span>
                 <span className="text-[11px] text-[#CBD5E1] font-th-medium">
                   {isAr
-                    ? 'للإستشارات الهندسية (شركة ذات مسؤولية محدودة - مهنية)'
-                    : 'Engineering Consultants Co. (Professional LLC)'}
+                    ? 'Falaq Engineering Consultants'
+                    : 'Engineering Consultants'}
                 </span>
               </div>
             </div>
